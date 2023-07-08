@@ -47,7 +47,11 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         if itemToEdit != nil {
             loadItemData()
+        } else {
+            DetailsField.text = placeholderText
+            DetailsField.textColor = UIColor.placeholderText
         }
+        
         
     }
     
@@ -118,13 +122,13 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         if textView.text == placeholderText {
             textView.text = ""
         }
-        textView.textColor = UIColor(named: "Black")
+        textView.textColor = UIColor.label
     }
 
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = placeholderText
-            textView.textColor = UIColor(named: "Grey")
+            textView.textColor = UIColor.placeholderText
         }
     }
         

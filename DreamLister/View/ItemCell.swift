@@ -18,7 +18,7 @@ class ItemCell: UITableViewCell {
     func configureCell(item: Item) {
         TitleLbl.text = item.title
         DetailsLbl.text = item.details
-        priceLbl.text = "$\(item.price)"
+        priceLbl.text = "➶\(item.price)"
         thumbUIImage.image = item.toImage?.image as? UIImage
         
         let colorIndicatorView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
