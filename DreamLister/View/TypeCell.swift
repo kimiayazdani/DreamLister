@@ -33,7 +33,7 @@ class TypeCell: UITableViewCell, UITextViewDelegate {
     
     @IBAction func saveBtnPressed(_ sender: Any) {
         typeName.endEditing(true)
-        itemType.name = typeName.text
+        itemType.name = typeName.text.capitalized
         itemType.color = colorWell.selectedColor?.toHex()
         ad.saveContext()
     }
