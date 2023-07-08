@@ -532,6 +532,7 @@
 				DEVELOPMENT_TEAM = JH2WFMFQYH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamLister/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Goal Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -560,6 +561,7 @@
 				DEVELOPMENT_TEAM = JH2WFMFQYH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamLister/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Goal Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
