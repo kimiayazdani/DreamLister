@@ -169,67 +169,62 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
             
         
-        let store9 = Store(context: context)
-        store9.name = "Others"
-        store9.color = "FFFFFF"
-        ad.saveContext()
-        
         let store = Store(context: context)
         store.name = "Exercise"
-        store.color = "3FFFFF"
+        store.color = "ED732E"
         let store10 = Store(context: context)
-        store10.name = "Just Have To"
-        store10.color = "656763"
+        store10.name = "Fun"
+        store10.color = "ED732E"
         let store2 = Store(context: context)
-        store2.name = "Computer Science"
-        store2.color = "000000"
-        let store3 = Store(context: context)
-        store3.name = "Business"
-        store3.color = "D3B142"
-        let store4 = Store(context: context)
-        store4.name = "Nature"
-        store4.color = "14B142"
+        store2.name = "Work"
+        store2.color = "ED732E"
+//        let store3 = Store(context: context)
+//        store3.name = "Business"
+//        store3.color = "D3B142"
+//        let store4 = Store(context: context)
+//        store4.name = "Nature"
+//        store4.color = "14B142"
         let store5 = Store(context: context)
         store5.name = "Art"
         store5.color = "AC30B1"
-        let store6 = Store(context: context)
-        store6.name = "Mission"
-        store6.color = "B2FFB1"
-        let store7 = Store(context: context)
-        store7.name = "Footprint"
-        store7.color = "607CB1"
-        let store8 = Store(context: context)
-        store8.name = "People"
-        store8.color = "FF9C42"
+//        let store6 = Store(context: context)
+//        store6.name = "Mission"
+//        store6.color = "B2FFB1"
+//        let store7 = Store(context: context)
+//        store7.name = "Footprint"
+//        store7.color = "607CB1"
+//        let store8 = Store(context: context)
+//        store8.name = "People"
+//        store8.color = "FF9C42"
 
         
         let picture = Image(context: context)
-        picture.image = UIImage(systemName:"moon.fill")
+        picture.image = UIImage(named:"stars")
         
         let item = Item(context: context)
-        item.title = "Ipad"
-        item.price = 1000
-        item.details = "I need it to draw badass digital drawings!"
+        item.title = "Give Us a Five Star Rating"
+        item.price = 10
+        item.details = "If you enjoyed this app, help others find it by giving us a rating and a review"
         item.finished = false
         item.toImage = picture
-        item.toStore = store7
+//        item.toStore = store7
         
+//
+//        let item2 = Item(context: context)
+//        item2.title = "Impossible Steak"
+//        item2.price = 20
+//        item2.details = "I can't wait until Impossible Foods discovers how to make steak texture!"
+//        item2.finished = true
+//        item2.toImage = picture
+//        item2.toStore = store3
         
-        let item2 = Item(context: context)
-        item2.title = "Impossible Steak"
-        item2.price = 20
-        item2.details = "I can't wait until Impossible Foods discovers how to make steak texture!"
-        item2.finished = true
-        item2.toImage = picture
-        item2.toStore = store3
-        
-        let item3 = Item(context: context)
-        item3.title = "Glasses"
-        item3.price = 100
-        item3.details = "I hope Parsa doesn't throw this on the ground every single morning so that I don't have to put it back on my DreamList for a while."
-        item3.finished = false
-        item3.toImage = picture
-        item3.toStore = store2
+//        let item3 = Item(context: context)
+//        item3.title = "Glasses"
+//        item3.price = 100
+//        item3.details = "I hope Parsa doesn't throw this on the ground every single morning so that I don't have to put it back on my DreamList for a while."
+//        item3.finished = false
+//        item3.toImage = picture
+//        item3.toStore = store2
         
         
         ad.saveContext()
