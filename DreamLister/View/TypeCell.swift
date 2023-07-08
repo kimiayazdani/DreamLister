@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TypeCell: UITableViewCell {
 
@@ -15,6 +16,12 @@ class TypeCell: UITableViewCell {
     
     @IBOutlet weak var typeName: UITextView!
     @IBOutlet weak var colorWell: UIColorWell!
+    
+    
+    weak var delegate: TypeCellDelegate?
+  
+    
+    
     
     func configureCell(itemType: Store) {
         self.itemType = itemType
@@ -29,6 +36,7 @@ class TypeCell: UITableViewCell {
         ad.saveContext()
         
     }
+    
     
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -52,8 +60,20 @@ class TypeCell: UITableViewCell {
             alpha: CGFloat(1.0)
         )
     }
+    // Handle Delete
+
+    @IBAction func deleteBtnPressed(_ sender: Any) {
+        
+        delegate?.typeCellDidRequestDeletion(self)
+        }
+    
 
 }
+
+
+
+
+
 
 extension UIColor {
     func toHex() -> String? {
@@ -68,4 +88,12 @@ extension UIColor {
         let hex = String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
         return hex
     }
+    
+    
+}
+
+
+
+protocol TypeCellDelegate: AnyObject {
+    func typeCellDidRequestDeletion(_ cell: TypeCell)
 }

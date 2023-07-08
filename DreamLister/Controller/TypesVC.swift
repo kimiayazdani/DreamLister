@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, TypeCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +26,7 @@ class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         attemptFetch()
     }
     
+    
     // Table Handling
     
     func configureCell(cell: TypeCell, indexPath: IndexPath) {
@@ -40,6 +41,7 @@ class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell", for: indexPath) as! TypeCell
         self.configureCell(cell: cell, indexPath: indexPath)
+        cell.delegate = self
         
         return cell
     }
@@ -111,6 +113,32 @@ class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             let error = error as NSError
             print("\(error.localizedDescription.debugDescription)")
         }
+        
+        tableView.reloadData()
     }
+    
+    // Handle Deletion
+    
+    func typeCellDidRequestDeletion(_ cell: TypeCell) {
+        let itemType = cell.itemType
+            
+            let alertController = UIAlertController(title: "Confirm Delete", message: "Are you sure you want to delete this item type?", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+                guard let self = self else { return }
+                
+                // Perform the deletion
+             
+                context.delete(itemType!)
+                ad.saveContext()
+                
+            }
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(deleteAction)
+            
+            present(alertController, animated: true)
+        }
     
 }

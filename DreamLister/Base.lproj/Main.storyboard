@@ -378,7 +378,7 @@
                                                                         <constraint firstAttribute="width" constant="35" id="94J-fR-brk"/>
                                                                         <constraint firstAttribute="height" constant="35" id="sUK-So-zQM"/>
                                                                     </constraints>
-                                                                    <color key="tintColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="tintColor" systemColor="labelColor"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain">
                                                                         <backgroundConfiguration key="background" image="square.and.arrow.down" catalog="system" imageContentMode="scaleAspectFit"/>
@@ -398,6 +398,9 @@
                                                                     <buttonConfiguration key="configuration" style="plain">
                                                                         <backgroundConfiguration key="background" image="trash" catalog="system" imageContentMode="scaleAspectFit"/>
                                                                     </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="deleteBtnPressed:" destination="cSC-Hr-ggr" eventType="touchUpInside" id="fuD-Ad-0RG"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
