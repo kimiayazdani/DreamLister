@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B50E29C2A59005600C84E51 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2942A59005600C84E51 /* Image+CoreDataClass.swift */; };
+		3B50E29D2A59005600C84E51 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2952A59005600C84E51 /* Image+CoreDataProperties.swift */; };
+		3B50E29E2A59005600C84E51 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2962A59005600C84E51 /* Item+CoreDataClass.swift */; };
+		3B50E29F2A59005600C84E51 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2972A59005600C84E51 /* Item+CoreDataProperties.swift */; };
+		3B50E2A02A59005600C84E51 /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2982A59005600C84E51 /* ItemType+CoreDataClass.swift */; };
+		3B50E2A12A59005600C84E51 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2992A59005600C84E51 /* ItemType+CoreDataProperties.swift */; };
+		3B50E2A22A59005600C84E51 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E29A2A59005600C84E51 /* Store+CoreDataClass.swift */; };
+		3B50E2A32A59005600C84E51 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E29B2A59005600C84E51 /* Store+CoreDataProperties.swift */; };
 		3B5162B72A4FDCD5005FF20F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162B62A4FDCD5005FF20F /* AppDelegate.swift */; };
 		3B5162B92A4FDCD5005FF20F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162B82A4FDCD5005FF20F /* SceneDelegate.swift */; };
-		3B5162BB2A4FDCD5005FF20F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162BA2A4FDCD5005FF20F /* ViewController.swift */; };
+		3B5162BB2A4FDCD5005FF20F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162BA2A4FDCD5005FF20F /* MainVC.swift */; };
 		3B5162BE2A4FDCD5005FF20F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5162BC2A4FDCD5005FF20F /* Main.storyboard */; };
 		3B5162C12A4FDCD5005FF20F /* DreamLister.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162BF2A4FDCD5005FF20F /* DreamLister.xcdatamodeld */; };
 		3B5162C32A4FDCD7005FF20F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5162C22A4FDCD7005FF20F /* Assets.xcassets */; };
@@ -17,6 +25,10 @@
 		3B5162D12A4FDCD7005FF20F /* DreamListerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162D02A4FDCD7005FF20F /* DreamListerTests.swift */; };
 		3B5162DB2A4FDCD7005FF20F /* DreamListerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162DA2A4FDCD7005FF20F /* DreamListerUITests.swift */; };
 		3B5162DD2A4FDCD7005FF20F /* DreamListerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5162DC2A4FDCD7005FF20F /* DreamListerUITestsLaunchTests.swift */; };
+		3B51637E2A578EB2005FF20F /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51637D2A578EB2005FF20F /* MaterialView.swift */; };
+		3B5163802A57908C005FF20F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51637F2A57908C005FF20F /* ItemCell.swift */; };
+		3B5163832A57CA0A005FF20F /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5163822A57CA0A005FF20F /* ItemDetailsVC.swift */; };
+		3B5163852A57CD75005FF20F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5163842A57CD75005FF20F /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B50E2942A59005600C84E51 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		3B50E2952A59005600C84E51 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		3B50E2962A59005600C84E51 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		3B50E2972A59005600C84E51 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		3B50E2982A59005600C84E51 /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		3B50E2992A59005600C84E51 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		3B50E29A2A59005600C84E51 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		3B50E29B2A59005600C84E51 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		3B5162B32A4FDCD5005FF20F /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5162B62A4FDCD5005FF20F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B5162B82A4FDCD5005FF20F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B5162BA2A4FDCD5005FF20F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B5162BA2A4FDCD5005FF20F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3B5162BD2A4FDCD5005FF20F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B5162C02A4FDCD5005FF20F /* DreamLister.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamLister.xcdatamodel; sourceTree = "<group>"; };
 		3B5162C22A4FDCD7005FF20F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +71,10 @@
 		3B5162D62A4FDCD7005FF20F /* DreamListerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamListerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5162DA2A4FDCD7005FF20F /* DreamListerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListerUITests.swift; sourceTree = "<group>"; };
 		3B5162DC2A4FDCD7005FF20F /* DreamListerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3B51637D2A578EB2005FF20F /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		3B51637F2A57908C005FF20F /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		3B5163822A57CA0A005FF20F /* ItemDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
+		3B5163842A57CD75005FF20F /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +125,11 @@
 		3B5162B52A4FDCD5005FF20F /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
+				3B5163812A57C9D4005FF20F /* Controller */,
+				3B51637C2A578E7D005FF20F /* View */,
+				3B5163092A573CD7005FF20F /* Model */,
 				3B5162B62A4FDCD5005FF20F /* AppDelegate.swift */,
 				3B5162B82A4FDCD5005FF20F /* SceneDelegate.swift */,
-				3B5162BA2A4FDCD5005FF20F /* ViewController.swift */,
 				3B5162BC2A4FDCD5005FF20F /* Main.storyboard */,
 				3B5162C22A4FDCD7005FF20F /* Assets.xcassets */,
 				3B5162C42A4FDCD7005FF20F /* LaunchScreen.storyboard */,
@@ -128,6 +154,48 @@
 				3B5162DC2A4FDCD7005FF20F /* DreamListerUITestsLaunchTests.swift */,
 			);
 			path = DreamListerUITests;
+			sourceTree = "<group>";
+		};
+		3B5163092A573CD7005FF20F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B50E2942A59005600C84E51 /* Image+CoreDataClass.swift */,
+				3B50E2962A59005600C84E51 /* Item+CoreDataClass.swift */,
+				3B50E2982A59005600C84E51 /* ItemType+CoreDataClass.swift */,
+				3B50E29A2A59005600C84E51 /* Store+CoreDataClass.swift */,
+				3B51630A2A573CF1005FF20F /* Generated */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B51630A2A573CF1005FF20F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				3B50E2952A59005600C84E51 /* Image+CoreDataProperties.swift */,
+				3B50E2972A59005600C84E51 /* Item+CoreDataProperties.swift */,
+				3B50E2992A59005600C84E51 /* ItemType+CoreDataProperties.swift */,
+				3B50E29B2A59005600C84E51 /* Store+CoreDataProperties.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		3B51637C2A578E7D005FF20F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B5163842A57CD75005FF20F /* CustomTextField.swift */,
+				3B51637D2A578EB2005FF20F /* MaterialView.swift */,
+				3B51637F2A57908C005FF20F /* ItemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B5163812A57C9D4005FF20F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B5162BA2A4FDCD5005FF20F /* MainVC.swift */,
+				3B5163822A57CA0A005FF20F /* ItemDetailsVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +329,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B50E2A02A59005600C84E51 /* ItemType+CoreDataClass.swift in Sources */,
+				3B50E2A32A59005600C84E51 /* Store+CoreDataProperties.swift in Sources */,
+				3B50E29C2A59005600C84E51 /* Image+CoreDataClass.swift in Sources */,
+				3B50E29D2A59005600C84E51 /* Image+CoreDataProperties.swift in Sources */,
+				3B5163832A57CA0A005FF20F /* ItemDetailsVC.swift in Sources */,
+				3B5163852A57CD75005FF20F /* CustomTextField.swift in Sources */,
+				3B51637E2A578EB2005FF20F /* MaterialView.swift in Sources */,
+				3B50E29E2A59005600C84E51 /* Item+CoreDataClass.swift in Sources */,
+				3B50E2A22A59005600C84E51 /* Store+CoreDataClass.swift in Sources */,
+				3B50E29F2A59005600C84E51 /* Item+CoreDataProperties.swift in Sources */,
+				3B5163802A57908C005FF20F /* ItemCell.swift in Sources */,
 				3B5162C12A4FDCD5005FF20F /* DreamLister.xcdatamodeld in Sources */,
-				3B5162BB2A4FDCD5005FF20F /* ViewController.swift in Sources */,
+				3B5162BB2A4FDCD5005FF20F /* MainVC.swift in Sources */,
 				3B5162B72A4FDCD5005FF20F /* AppDelegate.swift in Sources */,
+				3B50E2A12A59005600C84E51 /* ItemType+CoreDataProperties.swift in Sources */,
 				3B5162B92A4FDCD5005FF20F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +521,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JH2WFMFQYH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamLister/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -468,6 +549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JH2WFMFQYH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DreamLister/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
