@@ -24,6 +24,9 @@ class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         tableView.dataSource = self
         
         attemptFetch()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     
@@ -151,5 +154,29 @@ class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
         tableView.reloadData()
     }
     
+    // Keyboard View Handle
+    
+    @objc func keyboardWillChangeFrame(_ notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+
+        
+
+        let keyboardFrameInView = view.convert(keyboardFrame, from: nil)
+
+
+        tableView.contentInset.bottom = keyboardFrameInView.height
+        tableView.verticalScrollIndicatorInsets = tableView.contentInset
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        tableView.contentInset = UIEdgeInsets.zero
+        tableView.verticalScrollIndicatorInsets = UIEdgeInsets.zero
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
 }

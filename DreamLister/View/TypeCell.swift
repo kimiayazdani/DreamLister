@@ -84,6 +84,8 @@ class TypeCell: UITableViewCell, UITextViewDelegate {
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         return true
     }
+    
+   
 
 }
 
