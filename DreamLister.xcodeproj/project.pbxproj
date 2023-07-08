@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4E437A2A59C84900D1294C /* TypesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E43792A59C84900D1294C /* TypesVC.swift */; };
+		3B4E437C2A59CB0100D1294C /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E437B2A59CB0100D1294C /* TypeCell.swift */; };
 		3B50E29C2A59005600C84E51 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2942A59005600C84E51 /* Image+CoreDataClass.swift */; };
 		3B50E29E2A59005600C84E51 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2962A59005600C84E51 /* Item+CoreDataClass.swift */; };
 		3B50E2A02A59005600C84E51 /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B50E2982A59005600C84E51 /* ItemType+CoreDataClass.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B4E43792A59C84900D1294C /* TypesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesVC.swift; sourceTree = "<group>"; };
+		3B4E437B2A59CB0100D1294C /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
 		3B50E2942A59005600C84E51 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		3B50E2962A59005600C84E51 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		3B50E2982A59005600C84E51 /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -185,6 +189,7 @@
 				3B5163842A57CD75005FF20F /* CustomTextField.swift */,
 				3B51637D2A578EB2005FF20F /* MaterialView.swift */,
 				3B51637F2A57908C005FF20F /* ItemCell.swift */,
+				3B4E437B2A59CB0100D1294C /* TypeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			children = (
 				3B5162BA2A4FDCD5005FF20F /* MainVC.swift */,
 				3B5163822A57CA0A005FF20F /* ItemDetailsVC.swift */,
+				3B4E43792A59C84900D1294C /* TypesVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B50E2A02A59005600C84E51 /* ItemType+CoreDataClass.swift in Sources */,
+				3B4E437C2A59CB0100D1294C /* TypeCell.swift in Sources */,
 				3B50E29C2A59005600C84E51 /* Image+CoreDataClass.swift in Sources */,
 				3B50E2CB2A59186C00C84E51 /* Item+CoreDataProperties.swift in Sources */,
 				3B5163832A57CA0A005FF20F /* ItemDetailsVC.swift in Sources */,
@@ -337,6 +344,7 @@
 				3B51637E2A578EB2005FF20F /* MaterialView.swift in Sources */,
 				3B50E29E2A59005600C84E51 /* Item+CoreDataClass.swift in Sources */,
 				3B50E2CA2A59186C00C84E51 /* Image+CoreDataProperties.swift in Sources */,
+				3B4E437A2A59C84900D1294C /* TypesVC.swift in Sources */,
 				3B50E2A22A59005600C84E51 /* Store+CoreDataClass.swift in Sources */,
 				3B5163802A57908C005FF20F /* ItemCell.swift in Sources */,
 				3B5162C12A4FDCD5005FF20F /* DreamLister.xcdatamodeld in Sources */,

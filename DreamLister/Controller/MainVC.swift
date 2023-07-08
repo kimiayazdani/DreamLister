@@ -28,7 +28,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         ItemsTableView.dataSource = self
         ItemsTableView.delegate = self
         
-
         finishedFilterSwitch.isOn = false
 
         attemptFetch()
@@ -36,7 +35,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     override func viewDidAppear(_ animated: Bool) {
         if wascalled == false {
-//            generateTestDate()
+            generateTestDate()
             wascalled = true
         }
         attemptFetch()
@@ -114,6 +113,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             let error = error as NSError
             print("\(error.localizedDescription.debugDescription)")
         }
+        
+        ItemsTableView.reloadData()
     }
 
     

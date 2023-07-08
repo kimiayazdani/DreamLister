@@ -47,6 +47,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         if itemToEdit != nil {
             loadItemData()
+            DetailsField.textColor = UIColor.label
         } else {
             DetailsField.text = placeholderText
             DetailsField.textColor = UIColor.placeholderText
