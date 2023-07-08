@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class TypeCell: UITableViewCell {
+class TypeCell: UITableViewCell, UITextViewDelegate {
 
     var itemType: Store!
     
@@ -27,14 +27,15 @@ class TypeCell: UITableViewCell {
         self.itemType = itemType
         typeName.text = itemType.name
         colorWell.selectedColor = hexStringToUIColor(hex: itemType.color!)
+        
+        typeName.delegate = self
     }
     
     @IBAction func saveBtnPressed(_ sender: Any) {
-      
+        typeName.endEditing(true)
         itemType.name = typeName.text
         itemType.color = colorWell.selectedColor?.toHex()
         ad.saveContext()
-        
     }
     
     
@@ -67,6 +68,20 @@ class TypeCell: UITableViewCell {
         delegate?.typeCellDidRequestDeletion(self)
         }
     
+    
+    // Handle Change Name
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+//    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+//        return true
+//    }
 
 }
 

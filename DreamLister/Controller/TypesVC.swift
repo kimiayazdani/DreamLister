@@ -98,10 +98,10 @@ class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
 
-        let titleSort = NSSortDescriptor(key:"name", ascending:true)
+//        let titleSort = NSSortDescriptor(key:"name", ascending:true)
         
 
-        fetchRequest.sortDescriptors = [titleSort]
+        fetchRequest.sortDescriptors = []
         
         self.controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
