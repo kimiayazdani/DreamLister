@@ -65,12 +65,19 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     // Pickerview Functions
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let store = stores[row]
-        return store.name
+        
+        if row == 0 {
+            return "Others"
+        } else {
+            let store = stores[row-1]
+            return store.name
+        }
     }
     
+
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return stores.count
+        return stores.count + 1
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -108,7 +115,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
                 repeat {
                     let s = stores[index]
                     if s.name == store.name {
-                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        storePicker.selectRow(index+1, inComponent: 0, animated: false)
                         break
                     }
                     index += 1
@@ -177,7 +184,11 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
             item.details = details
         }
         item.finished = finishedSwitch.isOn
-        item.toStore = stores[ storePicker.selectedRow(inComponent: 0)]
+        if storePicker.selectedRow(inComponent: 0) == 0 {
+            item.toStore = nil
+        } else {
+            item.toStore = stores[storePicker.selectedRow(inComponent: 0) - 1]
+        }
         item.toImage = picture
         ad.saveContext()
         
