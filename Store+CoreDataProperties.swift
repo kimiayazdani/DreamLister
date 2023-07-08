@@ -17,6 +17,7 @@ extension Store {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var color: String?
     @NSManaged public var toImage: Image?
     @NSManaged public var toItem: NSSet?
 

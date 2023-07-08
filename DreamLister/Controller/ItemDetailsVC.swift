@@ -39,7 +39,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         TitleField.delegate = self
         DetailsField.delegate = self
         PriceField.delegate = self
-
+        finishedSwitch.isOn = false 
         
         getStores()
         

@@ -11,7 +11,9 @@ import CoreData
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
 
     
+    var wascalled = false
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var finishedFilterSwitch: UISwitch!
     @IBOutlet weak var SegmentedBtns: UISegmentedControl!
     @IBOutlet weak var ItemsTableView: UITableView!
@@ -28,11 +30,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
 
         finishedFilterSwitch.isOn = false
-        
-//        generateTestDate()
+
         attemptFetch()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if wascalled == false {
+//            generateTestDate()
+            wascalled = true
+        }
+        attemptFetch()
+    }
     
     // Table Handling Functions
     
@@ -81,7 +89,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         // Sort Types
         let dateSort =  NSSortDescriptor(key:"created", ascending:false)
-        let priceSort = NSSortDescriptor(key:"price", ascending:true)
+        let priceSort = NSSortDescriptor(key:"price", ascending:false)
         let titleSort = NSSortDescriptor(key:"title", ascending:true)
         
         if SegmentedBtns.selectedSegmentIndex == 0 {
@@ -148,27 +156,51 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
     
     func generateTestDate() {
+        let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
+        do {
+            let count = try context.count(for: fetchRequest)
+            if count > 0 {
+                return
+            }
+        } catch {
+            print("Error fetching existing objects: \(error.localizedDescription)")
+            return
+        }
+            
+        
+        let store9 = Store(context: context)
+        store9.name = "Others"
+        store9.color = "FFFFFF"
+        ad.saveContext()
         
         let store = Store(context: context)
         store.name = "Exercise"
+        store.color = "3FFFFF"
         let store10 = Store(context: context)
         store10.name = "Just Have To"
+        store10.color = "656763"
         let store2 = Store(context: context)
         store2.name = "Computer Science"
+        store2.color = "000000"
         let store3 = Store(context: context)
         store3.name = "Business"
+        store3.color = "D3B142"
         let store4 = Store(context: context)
         store4.name = "Nature"
+        store4.color = "14B142"
         let store5 = Store(context: context)
         store5.name = "Art"
+        store5.color = "AC30B1"
         let store6 = Store(context: context)
         store6.name = "Mission"
+        store6.color = "B2FFB1"
         let store7 = Store(context: context)
-        store7.name = "Foot Print"
+        store7.name = "Footprint"
+        store7.color = "607CB1"
         let store8 = Store(context: context)
         store8.name = "People"
-        let store9 = Store(context: context)
-        store9.name = "Others"
+        store8.color = "FF9C42"
+
         
         let picture = Image(context: context)
         picture.image = UIImage(systemName:"moon.fill")
@@ -179,6 +211,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         item.details = "I need it to draw badass digital drawings!"
         item.finished = false
         item.toImage = picture
+        item.toStore = store7
         
         
         let item2 = Item(context: context)
@@ -187,6 +220,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         item2.details = "I can't wait until Impossible Foods discovers how to make steak texture!"
         item2.finished = true
         item2.toImage = picture
+        item2.toStore = store3
         
         let item3 = Item(context: context)
         item3.title = "Glasses"
@@ -194,6 +228,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         item3.details = "I hope Parsa doesn't throw this on the ground every single morning so that I don't have to put it back on my DreamList for a while."
         item3.finished = false
         item3.toImage = picture
+        item3.toStore = store2
         
         
         ad.saveContext()
@@ -201,8 +236,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
     
     // Actions
-    @IBAction func finishedFilterSwitch(_ sender: Any) {
+    @IBAction func finishedFilterChange(_ sender: Any) {
         attemptFetch()
+        if finishedFilterSwitch.isOn {
+            navigationBar.title = "Finished"
+        } else {
+            navigationBar.title = "In Progress"
+        }
         ItemsTableView.reloadData()
     }
     

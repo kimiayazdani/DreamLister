@@ -18,9 +18,9 @@ extension Item {
 
     @NSManaged public var created: Date?
     @NSManaged public var details: String?
+    @NSManaged public var finished: Bool
     @NSManaged public var price: Double
     @NSManaged public var title: String?
-    @NSManaged public var finished: Bool
     @NSManaged public var toImage: Image?
     @NSManaged public var toItemType: ItemType?
     @NSManaged public var toStore: Store?

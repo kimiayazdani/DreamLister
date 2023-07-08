@@ -20,6 +20,7 @@
         <relationship name="toItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="toItemType" inverseEntity="Item"/>
     </entity>
     <entity name="Store" representedClassName=".Store" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toStore" inverseEntity="Image"/>
         <relationship name="toItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="toStore" inverseEntity="Item"/>
