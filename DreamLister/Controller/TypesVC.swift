@@ -141,4 +141,15 @@ class TypesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSF
             present(alertController, animated: true)
         }
     
+    // Add Item Handling
+    
+    @IBAction func addBtnPressed(_ sender: Any) {
+        let newType = Store(context: context)
+        newType.name = "New Type"
+        newType.color = "FFFFFF"
+        ad.saveContext()
+        tableView.reloadData()
+    }
+    
+    
 }

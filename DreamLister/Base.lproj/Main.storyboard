@@ -23,7 +23,7 @@
                                 </constraints>
                                 <segments>
                                     <segment title="Newest"/>
-                                    <segment title="Price"/>
+                                    <segment title="Priority"/>
                                     <segment title="Title"/>
                                 </segments>
                                 <connections>
@@ -435,7 +435,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Item Types" id="vVI-1H-jfv">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="60r-zx-6cU"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="60r-zx-6cU">
+                            <connections>
+                                <action selector="addBtnPressed:" destination="dmZ-AP-D0S" id="ayP-9b-AuM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="K7W-9w-yb0" id="e7Q-Gu-XEP"/>
