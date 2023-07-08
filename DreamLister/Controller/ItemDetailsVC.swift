@@ -10,19 +10,21 @@ import CoreData
 
 class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
 
-    var placeholderText = "Details"
+    
     @IBOutlet weak var DetailsField: UITextView!
     @IBOutlet weak var PriceField: UITextField!
     @IBOutlet weak var TitleField: UITextField!
     @IBOutlet weak var storePicker: UIPickerView!
     @IBOutlet weak var thumbImgView: UIImageView!
+    @IBOutlet weak var selectTypeLbl: UILabel!
+    @IBOutlet weak var finishedLbl: UILabel!
     @IBOutlet weak var finishedSwitch: UISwitch!
     
     var stores = [Store]()
     var itemToEdit: Item?
     
     var imagePicker: UIImagePickerController!
-    
+    var placeholderText = "Details"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,7 +130,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
-            textView.resignFirstResponder() 
+            textView.resignFirstResponder()
             return false
         }
         return true
@@ -191,4 +193,32 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         }
         imagePicker.dismiss(animated: true)
     }
+    
+    // Orientation
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        coordinator.animate(alongsideTransition: { context in
+            self.updateViewHeightForOrientation()
+        }, completion: nil)
+    }
+    
+    private func updateViewHeightForOrientation() {
+           if traitCollection.verticalSizeClass == .compact {
+               // Landscape orientation
+               storePicker.isHidden = true
+               finishedSwitch.isHidden = true
+               selectTypeLbl.isHidden = true
+               finishedLbl.isHidden = true
+               
+           } else {
+               // Portrait or other orientations
+               storePicker.isHidden = false
+               finishedSwitch.isHidden = false
+               selectTypeLbl.isHidden = false
+               finishedLbl.isHidden = false
+           }
+        view.layoutIfNeeded()
+       }
 }

@@ -299,7 +299,9 @@
                         <outlet property="DetailsField" destination="8XB-3u-haL" id="G4N-EG-wQ0"/>
                         <outlet property="PriceField" destination="yoB-Ag-dnU" id="Ka3-BF-OJZ"/>
                         <outlet property="TitleField" destination="u39-Jl-MHi" id="mIr-22-sZj"/>
+                        <outlet property="finishedLbl" destination="tPS-bR-0Wg" id="acE-OA-bYt"/>
                         <outlet property="finishedSwitch" destination="lcL-V1-dcf" id="ZZP-MG-fz6"/>
+                        <outlet property="selectTypeLbl" destination="BeS-te-pii" id="pOq-Ga-u4x"/>
                         <outlet property="storePicker" destination="g9d-12-qJl" id="HxJ-uy-BXz"/>
                         <outlet property="thumbImgView" destination="27W-Ac-ky2" id="Q9r-k0-kki"/>
                     </connections>
