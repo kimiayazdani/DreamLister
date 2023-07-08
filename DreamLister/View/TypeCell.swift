@@ -29,6 +29,8 @@ class TypeCell: UITableViewCell, UITextViewDelegate {
         colorWell.selectedColor = hexStringToUIColor(hex: itemType.color!)
         
         typeName.delegate = self
+        typeName.isScrollEnabled = false
+        typeName.isUserInteractionEnabled = true
     }
     
     @IBAction func saveBtnPressed(_ sender: Any) {
@@ -79,9 +81,9 @@ class TypeCell: UITableViewCell, UITextViewDelegate {
         return true
     }
     
-//    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-//        return true
-//    }
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        return true
+    }
 
 }
 
