@@ -168,6 +168,9 @@
                                     <constraint firstAttribute="width" constant="100" id="Scn-tC-N9g"/>
                                     <constraint firstAttribute="height" constant="100" id="ap6-FH-Ppe"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI1-hG-PoF">
                                 <rect key="frame" x="58" y="166" width="24" height="14"/>
@@ -219,14 +222,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Details" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-Md-loi">
-                                <rect key="frame" x="20" y="243" width="353" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="6ck-Ed-alf"/>
-                                </constraints>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B55-qc-YOH">
                                 <rect key="frame" x="40" y="383" width="313" height="31"/>
                                 <subviews>
@@ -244,6 +239,19 @@
                                     </switch>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Details" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8XB-3u-haL">
+                                <rect key="frame" x="20" y="243" width="353" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fkE-et-AlH"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FOb-W4-LOw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -255,6 +263,7 @@
                             <constraint firstItem="FOb-W4-LOw" firstAttribute="trailing" secondItem="u39-Jl-MHi" secondAttribute="trailing" constant="20" id="74s-V1-Tny"/>
                             <constraint firstItem="Xln-2h-k5m" firstAttribute="top" secondItem="g9d-12-qJl" secondAttribute="bottom" constant="15" id="7SO-NI-sQX"/>
                             <constraint firstItem="FOb-W4-LOw" firstAttribute="trailing" secondItem="Xln-2h-k5m" secondAttribute="trailing" constant="20" id="Dci-Hl-zTL"/>
+                            <constraint firstItem="FOb-W4-LOw" firstAttribute="trailing" secondItem="8XB-3u-haL" secondAttribute="trailing" constant="20" id="FWr-oo-Vq0"/>
                             <constraint firstItem="g9d-12-qJl" firstAttribute="trailing" secondItem="FOb-W4-LOw" secondAttribute="trailing" id="Hcq-Wg-wZ1"/>
                             <constraint firstItem="BeS-te-pii" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" constant="20" id="HlR-eh-IMJ"/>
                             <constraint firstItem="B55-qc-YOH" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" constant="40" id="JJt-hG-lIF"/>
@@ -270,13 +279,12 @@
                             <constraint firstItem="yoB-Ag-dnU" firstAttribute="top" secondItem="u39-Jl-MHi" secondAttribute="bottom" constant="20" id="h35-ir-vDo"/>
                             <constraint firstItem="g9d-12-qJl" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" id="h5h-4h-HQx"/>
                             <constraint firstItem="g9d-12-qJl" firstAttribute="top" secondItem="BeS-te-pii" secondAttribute="bottom" constant="10" id="hgV-b6-hjt"/>
+                            <constraint firstItem="8XB-3u-haL" firstAttribute="top" secondItem="27W-Ac-ky2" secondAttribute="bottom" constant="20" id="jB3-ue-N3C"/>
                             <constraint firstItem="27W-Ac-ky2" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" constant="20" id="kNL-1I-8DU"/>
-                            <constraint firstItem="B55-qc-YOH" firstAttribute="top" secondItem="xKz-Md-loi" secondAttribute="bottom" constant="40" id="lDK-CB-uRa"/>
-                            <constraint firstItem="xKz-Md-loi" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" constant="20" id="lEp-Y4-V5p"/>
                             <constraint firstItem="mI1-hG-PoF" firstAttribute="width" secondItem="27W-Ac-ky2" secondAttribute="width" multiplier="0.24" id="mWe-qw-xio"/>
-                            <constraint firstItem="xKz-Md-loi" firstAttribute="top" secondItem="27W-Ac-ky2" secondAttribute="bottom" constant="20" id="uJT-Vp-Uw6"/>
+                            <constraint firstItem="8XB-3u-haL" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" constant="20" id="pN8-HG-MZw"/>
+                            <constraint firstItem="B55-qc-YOH" firstAttribute="top" secondItem="8XB-3u-haL" secondAttribute="bottom" constant="40" id="rxW-UO-ea9"/>
                             <constraint firstItem="mI1-hG-PoF" firstAttribute="height" secondItem="27W-Ac-ky2" secondAttribute="height" multiplier="0.14" id="ukQ-0P-MiB"/>
-                            <constraint firstItem="FOb-W4-LOw" firstAttribute="trailing" secondItem="xKz-Md-loi" secondAttribute="trailing" constant="20" id="yIC-ep-lNv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add / Edit" id="JWd-YW-Cl5">
@@ -288,7 +296,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DetailsField" destination="xKz-Md-loi" id="FMz-VD-fYd"/>
+                        <outlet property="DetailsField" destination="8XB-3u-haL" id="G4N-EG-wQ0"/>
                         <outlet property="PriceField" destination="yoB-Ag-dnU" id="Ka3-BF-OJZ"/>
                         <outlet property="TitleField" destination="u39-Jl-MHi" id="mIr-22-sZj"/>
                         <outlet property="finishedSwitch" destination="lcL-V1-dcf" id="ZZP-MG-fz6"/>

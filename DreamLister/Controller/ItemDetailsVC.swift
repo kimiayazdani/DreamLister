@@ -8,9 +8,10 @@
 import UIKit
 import CoreData
 
-class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
 
-    @IBOutlet weak var DetailsField: UITextField!
+    var placeholderText = "Details"
+    @IBOutlet weak var DetailsField: UITextView!
     @IBOutlet weak var PriceField: UITextField!
     @IBOutlet weak var TitleField: UITextField!
     @IBOutlet weak var storePicker: UIPickerView!
@@ -35,9 +36,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
-        TitleField.delegate = self
         DetailsField.delegate = self
+        TitleField.delegate = self
         PriceField.delegate = self
         finishedSwitch.isOn = false 
         
@@ -109,6 +109,28 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == placeholderText {
+            textView.text = ""
+        }
+        textView.textColor = UIColor(named: "Black")
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeholderText
+            textView.textColor = UIColor(named: "Grey")
+        }
+    }
+        
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder() 
+            return false
+        }
         return true
     }
     
