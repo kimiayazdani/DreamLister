@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="30" id="3Bn-NW-X6N"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Newest"/>
+                                    <segment title="Date"/>
                                     <segment title="Priority"/>
                                     <segment title="Title"/>
                                 </segments>
@@ -172,8 +172,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI1-hG-PoF">
-                                <rect key="frame" x="58" y="166" width="24" height="14"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI1-hG-PoF">
+                                <rect key="frame" x="28" y="132" width="83" height="79"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -300,11 +300,11 @@
                             <constraint firstItem="g9d-12-qJl" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" id="h5h-4h-HQx"/>
                             <constraint firstItem="8XB-3u-haL" firstAttribute="top" secondItem="27W-Ac-ky2" secondAttribute="bottom" constant="20" id="jB3-ue-N3C"/>
                             <constraint firstItem="27W-Ac-ky2" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" constant="20" id="kNL-1I-8DU"/>
-                            <constraint firstItem="mI1-hG-PoF" firstAttribute="width" secondItem="27W-Ac-ky2" secondAttribute="width" multiplier="0.24" id="mWe-qw-xio"/>
+                            <constraint firstItem="mI1-hG-PoF" firstAttribute="width" secondItem="27W-Ac-ky2" secondAttribute="width" id="mWe-qw-xio"/>
                             <constraint firstItem="8XB-3u-haL" firstAttribute="leading" secondItem="FOb-W4-LOw" secondAttribute="leading" constant="20" id="pN8-HG-MZw"/>
                             <constraint firstItem="vWe-fk-ppo" firstAttribute="centerX" secondItem="FOb-W4-LOw" secondAttribute="centerX" id="qXO-J9-hH6"/>
                             <constraint firstItem="B55-qc-YOH" firstAttribute="top" secondItem="8XB-3u-haL" secondAttribute="bottom" constant="40" id="rxW-UO-ea9"/>
-                            <constraint firstItem="mI1-hG-PoF" firstAttribute="height" secondItem="27W-Ac-ky2" secondAttribute="height" multiplier="0.14" id="ukQ-0P-MiB"/>
+                            <constraint firstItem="mI1-hG-PoF" firstAttribute="height" secondItem="27W-Ac-ky2" secondAttribute="height" id="ukQ-0P-MiB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add / Edit" id="JWd-YW-Cl5">
